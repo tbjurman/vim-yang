@@ -70,6 +70,8 @@ syn match yangLengthArg /"\(\d\+\|min\)\s*\.\.\s*\(\d\+\|max\)"/
 syn match yangNumber /\<[+-]\=\d\+\>/
 syn match yangNumber	"\<0x\x\+\>"
 
+" slow sync
+syn sync minlines=1000
 
 "-------------------------------------
 " and now for the highlighting
@@ -92,4 +94,3 @@ hi def link yangDateArg Conditional
 hi def link yangLengthArg Conditional
 
 let b:current_syntax = "yang"
-
